@@ -2,7 +2,7 @@ import random
 def main():
     num=random.randint(1,100)
     attempts=0
-    max_attempts=6
+    max_attempts=5
     while attempts<max_attempts:
         try:
             guess=int(input("enter a number"))
