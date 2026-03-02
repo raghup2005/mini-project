@@ -2,8 +2,13 @@ import random
 def main():
     num=random.randint(1,100)
     attempts=0
-    while True:
-        guess=int(input("enter a number"))
+    max_attempts=6
+    while attempts<max_attempts:
+        try:
+            guess=int(input("enter a number"))
+        except ValueError:
+            print("invalid input")
+            continue
         attempts+=1
         if guess<num:
             print("low")
@@ -11,6 +16,8 @@ def main():
             print("high")
         else:
             print(f"correct! guess with in {attempts}")
-            break
-if __name__=="_main__":
+            return
+        print(f"attempts left:{max_attempts-attempts}")
+    print(f"game over! the number is {num}")
+if __name__ == "__main__":
     main()
