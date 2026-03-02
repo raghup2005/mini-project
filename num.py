@@ -18,7 +18,7 @@ def main():
         else:
             print(f"correct! guess with in {attempts}")
             if attempts==1:
-                points+=10
+                points+=20
                 print(f"you got {points}points")
             return
         print(f"attempts left:{max_attempts-attempts}")
